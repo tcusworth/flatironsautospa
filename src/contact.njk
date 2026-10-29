@@ -1,0 +1,80 @@
+---
+layout: layouts/base.njk
+title: "Contact Flatirons Auto Spa | Book Auto Detailing in Longmont, CO"
+description: "Contact Flatirons Auto Spa to book premium auto detailing, ceramic coating, polishing, and interior detailing in Longmont and Boulder County."
+ogTitle: "Contact Flatirons Auto Spa"
+ogDescription: "Book premium vehicle detailing in Longmont and Boulder County."
+ogImage: "/assets/images/hero-1.png"
+schemaKey: contact
+solidHeader: true
+headerCall: true
+sitemapPriority: 0.9
+sitemapChangefreq: monthly
+---
+<section class="page-hero contact-hero">
+  <div class="page-hero-media" aria-hidden="true"></div>
+  <div class="page-hero-content reveal is-visible">
+    <p class="eyebrow">Book your detail</p>
+    <h1>Contact Flatirons Auto Spa.</h1>
+    <p>Tell us about your vehicle, your goals, and the package you are considering. We will help you choose the right detail for your schedule and budget.</p>
+  </div>
+</section>
+
+<section class="section contact-section">
+  <div class="contact-info reveal is-visible">
+    <p class="eyebrow">Visit or call</p>
+    <h2>Premium detailing starts with a quick conversation.</h2>
+    <div class="contact-card">
+      <strong>{{ site.name }}</strong>
+      <p>{{ site.address.street }}<br>{{ site.address.city }}, {{ site.address.region }} {{ site.address.zip }}</p>
+      <a href="{{ site.phoneHref }}">{{ site.phone }}</a>
+    </div>
+    <div class="contact-note">
+      <h3>What to include</h3>
+      <p>Vehicle year, make, model, interior condition, exterior condition, preferred package, and whether you are interested in ceramic coating or concierge pickup and dropoff.</p>
+    </div>
+  </div>
+
+  {#- Netlify Forms: submissions appear in the Netlify dashboard under Forms. -#}
+  <form class="contact-form reveal is-visible" name="contact" method="POST" action="/contact/" data-netlify="true" netlify-honeypot="bot-field" data-contact-form>
+    <input type="hidden" name="form-name" value="contact">
+    <p hidden><label>Leave this field empty: <input name="bot-field"></label></p>
+    <div class="form-row">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" autocomplete="name" required>
+    </div>
+    <div class="form-row two">
+      <div>
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email">
+      </div>
+    </div>
+    <div class="form-row two">
+      <div>
+        <label for="vehicle">Vehicle</label>
+        <input id="vehicle" name="vehicle" type="text" placeholder="Year, make, model">
+      </div>
+      <div>
+        <label for="package">Package interest</label>
+        <select id="package" name="package">
+          <option>Not sure yet</option>
+          <option>Essential Elegance</option>
+          <option>Prestige Protection</option>
+          <option>Grand Reserve Executive Spa</option>
+          <option>Ceramic coating</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <label for="message">How can we help?</label>
+      <textarea id="message" name="message" rows="6" placeholder="Tell us about the vehicle condition, timing, and detail goals." required></textarea>
+    </div>
+    <button class="button primary" type="submit">Send request</button>
+    <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+    <p class="form-fineprint">Prefer to talk? Call {{ site.phone }} for the fastest booking confirmation.</p>
+  </form>
+</section>

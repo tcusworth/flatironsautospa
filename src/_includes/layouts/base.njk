@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="{{ site.name }}">
+    <meta name="theme-color" content="{{ site.themeColor }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    {%- if preloadImage %}
+    <link rel="preload" as="image" href="{{ preloadImage }}">
+    {%- endif %}
+    <link rel="stylesheet" href="/assets/styles.css">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:title" content="{{ ogTitle or title }}">
+    <meta property="og:description" content="{{ ogDescription or description }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.url }}{{ ogImage or site.defaultOgImage }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ ogTitle or title }}">
+    <meta name="twitter:description" content="{{ ogDescription or description }}">
+    <meta name="twitter:image" content="{{ site.url }}{{ ogImage or site.defaultOgImage }}">
+    {%- if schemaKey %}
+    <script type="application/ld+json">
+{{ schema[schemaKey] | dump(2) | safe }}
+    </script>
+    {%- endif %}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header{% if solidHeader %} is-scrolled{% endif %}" data-header{% if solidHeader %} data-solid-header="true"{% endif %}>
+      <a aria-label="{{ site.name }} home" class="brand" href="/">
+        <img src="{{ site.logo }}" alt="{{ site.name }} logo" width="56" height="56">
+        <span>{{ site.name }}</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        {%- for item in site.nav %}
+        <a href="{{ item.url }}"{% if item.url == page.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+        {%- endfor %}
+      </nav>
+      {%- if headerCall %}
+      <a class="header-cta" href="{{ site.phoneHref }}">Call {{ site.phone }}</a>
+      {%- else %}
+      <a class="header-cta" href="/contact/">Book now</a>
+      {%- endif %}
+    </header>
+
+    <main id="main">
+{{ content | safe }}
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <img src="{{ site.logo }}" alt="{{ site.name }} logo" width="68" height="68">
+        <p>{{ site.footerBlurb }}</p>
+      </div>
+      <address>
+        <strong>{{ site.name }}</strong><br>
+        {{ site.address.street }}<br>
+        {{ site.address.city }}, {{ site.address.region }} {{ site.address.zip }}<br>
+        <a href="{{ site.phoneHref }}">{{ site.phone }}</a>
+      </address>
+    </footer>
+    <div class="mobile-booking-bar" aria-label="Mobile booking shortcuts">
+      <a href="{{ site.phoneHref }}">Call</a>
+      <a href="/contact/">Book</a>
+      <a href="/gallery/">Gallery</a>
+    </div>
+    <script src="/assets/main.js"></script>
+  </body>
+</html>

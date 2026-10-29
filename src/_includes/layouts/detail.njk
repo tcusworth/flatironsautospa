@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+solidHeader: true
+---
+<section class="page-hero detail-hero">
+  <div class="page-hero-media" aria-hidden="true"></div>
+  <div class="page-hero-content reveal">
+    <p class="eyebrow">{{ eyebrow }}</p>
+    <h1>{{ heading }}</h1>
+    <p>{{ lead }}</p>
+  </div>
+</section>
+<section class="section detail-body">
+  <aside>
+    <div class="detail-panel reveal">
+      <strong>{{ panelTitle }}</strong>
+      <ul>
+        {%- for item in panelItems %}
+        <li>{{ item }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <div class="related-panel reveal">
+      <h3>{{ relatedTitle or "Related services" }}</h3>
+      <ul>
+        {%- for link in related %}
+        <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </aside>
+  <article class="detail-copy reveal">
+    {{ content | safe }}
+    <a class="button primary" href="/contact/">{{ ctaLabel }}</a>
+  </article>
+</section>

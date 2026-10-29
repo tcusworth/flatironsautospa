@@ -1,0 +1,45 @@
+---
+layout: layouts/base.njk
+title: "Auto Detailing Gallery | Flatirons Auto Spa Boulder & Longmont"
+description: "Explore Flatirons Auto Spa sample-page gallery images featuring Porsche, Ferrari, Mercedes, Tesla, Range Rover, BMW, Honda, and vintage vehicle detailing work."
+ogTitle: "Flatirons Auto Spa Detailing Gallery"
+ogDescription: "Sample-page vehicle gallery imagery from Flatirons Auto Spa."
+ogImage: "/assets/images/sample-vw-in-garage.jpeg"
+schemaKey: gallery
+solidHeader: true
+sitemapPriority: 0.8
+sitemapChangefreq: monthly
+---
+<section class="page-hero gallery-hero">
+  <div class="page-hero-media" aria-hidden="true"></div>
+  <div class="page-hero-content reveal">
+    <p class="eyebrow">Sample-page gallery</p>
+    <h1>Some examples of our work.</h1>
+    <p>A complete local copy of the vehicle images from the original Flatirons Auto Spa sample page.</p>
+  </div>
+</section>
+
+<section class="section gallery-intro">
+  <div class="section-heading reveal">
+    <p class="eyebrow">Gallery</p>
+    <h2>All images from the original sample page.</h2>
+    <p>These full-size assets were pulled from the current sample-page gallery and arranged into a richer responsive layout.</p>
+  </div>
+</section>
+
+<section class="gallery-grid" aria-label="{{ site.name }} image gallery">
+  {%- for item in gallery %}
+  <figure class="gallery-item{% if item.size %} {{ item.size }}{% endif %} reveal">
+    <img src="/assets/images/{{ item.file }}" alt="{{ item.alt }}">
+    <figcaption>{{ item.caption }}</figcaption>
+  </figure>
+  {%- endfor %}
+</section>
+
+<section class="cta-panel">
+  <div class="reveal">
+    <p class="eyebrow">Like what you see?</p>
+    <h2>Schedule a detail for your vehicle.</h2>
+  </div>
+  <a class="button primary" href="/contact/">Contact us</a>
+</section>
