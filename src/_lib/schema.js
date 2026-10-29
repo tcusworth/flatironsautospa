@@ -175,6 +175,8 @@ export const pageSchemas = {
           "@type": "ImageObject",
           contentUrl: abs(`/assets/images/${g.file}`),
           caption: g.caption,
+          creator: { "@id": businessId },
+          creditText: site.name,
         })),
       },
       breadcrumbs("/gallery/", "Gallery"),

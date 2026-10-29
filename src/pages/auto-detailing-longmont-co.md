@@ -29,6 +29,11 @@ faqs:
   - duration
   - mobile
   - cost
+packagesHeading: "Detailing packages in Longmont"
+packageCards:
+  - essential-elegance
+  - prestige-protection
+  - grand-reserve
 ---
 
 ## Premium Longmont auto detailing.
@@ -40,3 +45,27 @@ Whether your vehicle needs a seasonal reset, pre-sale cleanup, luxury-level fini
 - Located in Longmont at 3845 Florentine Drive.
 - Good fit for daily vehicles, SUVs, luxury cars, and classics.
 - Call to choose a package and reserve time.
+
+## Visit the Longmont studio
+
+Flatirons Auto Spa is at 3845 Florentine Drive, Longmont, CO 80503. Detailing is by appointment, so call (303) 210-7631 to talk through your vehicle and reserve a time. Drivers from Lafayette, Louisville, Boulder, and the rest of Boulder County also bring their vehicles here.
+
+## Services at the Longmont studio
+
+- [Interior detailing](/interior-detailing/): vacuuming, steam cleaning, leather care, and odor-conscious refresh work.
+- [Exterior detailing](/exterior-detailing/): hand wash, wheel and tire care, wax sealant, and polishing.
+- [Paint correction](/paint-correction-longmont/): swirl and haze reduction in Longmont.
+- [Ceramic coating](/ceramic-coating/): durable gloss and protection.
+- [Maintenance wash](/maintenance-wash/): regular care between full details.
+- [Executive detail packages](/executive-detail-packages/): interior, exterior, and protection in one visit.
+
+## Seasonal detailing in Longmont
+
+Many drivers book a detail after winter to clear away salt and road film, before a sale or trip, or after a stretch of dusty roads and pollen season. Whatever the reason, the free consultation is the place to describe your vehicle and choose the package that fits.
+
+## What to expect
+
+- **Free consultation.** Call to talk through your vehicle, your goals, and the right level of care.
+- **By appointment.** Detailing is scheduled so enough time is set aside for your vehicle.
+- **Typically 2 to 4 hours.** Most full details fall in that range depending on vehicle size, condition, and package.
+- **Drive away ready.** Your vehicle comes back clean, protected, and ready for the road.

@@ -35,6 +35,33 @@ solidHeader: true
     <a class="button primary" href="/contact/">{{ ctaLabel }}</a>
   </article>
 </section>
+{%- if packageCards %}
+<section class="section packages">
+  <div class="section-heading reveal">
+    <p class="eyebrow">Pricing</p>
+    <h2>{{ packagesHeading or "Packages" }}</h2>
+    <p>Prices shown are starting prices. Call {{ site.phone }} to discuss your vehicle.</p>
+  </div>
+  <div class="pricing-grid pricing-grid--{{ packageCards | length }}">
+    {%- for pkg in home.packages.items %}
+    {%- if pkg.schemaId in packageCards %}
+    <article class="price-card{% if pkg.featured %} featured{% endif %} reveal">
+      <p class="tier">{{ pkg.tier }}</p>
+      <h3>{{ pkg.name }}</h3>
+      <div class="price">${{ pkg.price }} <span>sedan</span></div>
+      <p class="suv">${{ pkg.suvPrice }} SUV</p>
+      <ul>
+        {%- for note in (packageNotes[pkg.schemaId] if packageNotes and packageNotes[pkg.schemaId] else pkg.features) %}
+        <li>{{ note }}</li>
+        {%- endfor %}
+      </ul>
+      <a href="{{ site.phoneHref }}">{{ pkg.cta }}</a>
+    </article>
+    {%- endif %}
+    {%- endfor %}
+  </div>
+</section>
+{%- endif %}
 {%- if faqs %}
 <section class="section faq">
   <div class="section-heading reveal">

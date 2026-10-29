@@ -53,7 +53,8 @@ Copy any file in `src/pages/`, change the front matter and body. The file name b
 (`src/pages/headlight-restoration.md` -> `/headlight-restoration/`). Pages with `sitemapPriority`
 in their front matter are added to `sitemap.xml` automatically (with `lastmod` from git).
 Front matter also drives the H1 (`heading`), breadcrumb (`crumb`), `areaServed`, and which
-homepage FAQs to show (`faqs`: ids from `src/_data/home.js`).
+homepage FAQs to show (`faqs`: ids from `src/_data/home.js`), and the pricing cards
+(`packageCards`: package ids from `src/_data/home.js`, optional `packageNotes` to list only what's relevant to that service).
 
 ## Contact form
 
