@@ -2,7 +2,8 @@
 title: "Ceramic Coating Boulder County | Flatirons Auto Spa"
 description: "Ceramic coating for Boulder County vehicles with gloss, easier washing, and paint protection from Flatirons Auto Spa in Longmont CO."
 eyebrow: "Boulder County ceramic coating"
-heading: "Gloss and protection for Boulder County vehicles."
+heading: "Ceramic Coating in Boulder County, CO"
+slogan: "Gloss and protection for Boulder County vehicles."
 lead: "Ceramic coating helps paint stay slick, glossy, and easier to clean through Colorado driving conditions."
 panelTitle: "Coating benefits"
 panelItems:
@@ -20,6 +21,13 @@ related:
 ctaLabel: "Book ceramic coating"
 sitemapPriority: 0.85
 sitemapChangefreq: monthly
+crumb: "Ceramic Coating Boulder County"
+areaServed:
+  - "Boulder County, CO"
+faqs:
+  - ceramic-life
+  - cost
+  - luxury
 ---
 
 ## Ceramic coating near Boulder, Longmont, and Boulder County.

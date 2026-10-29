@@ -45,6 +45,12 @@ body {
 img {
   display: block;
   max-width: 100%;
+  height: auto; /* width/height attributes reserve space; CSS controls sizing */
+}
+
+/* <picture> wrappers (responsive images) are layout-transparent */
+picture {
+  display: contents;
 }
 
 a {
@@ -102,7 +108,7 @@ a {
   object-fit: contain;
 }
 
-nav {
+.site-header nav {
   justify-self: center;
   display: flex;
   align-items: center;
@@ -111,18 +117,18 @@ nav {
   font-weight: 700;
 }
 
-nav a,
+.site-header nav a,
 .header-cta {
   opacity: 0.88;
 }
 
-nav a:hover,
+.site-header nav a:hover,
 .header-cta:hover,
-nav a[aria-current="page"] {
+.site-header nav a[aria-current="page"] {
   opacity: 1;
 }
 
-nav a[aria-current="page"] {
+.site-header nav a[aria-current="page"] {
   color: var(--lime);
 }
 
@@ -187,11 +193,36 @@ nav a[aria-current="page"] {
 }
 
 .contact-hero .page-hero-media {
-  background-image: url("images/hero-1.png");
+  background-image: url("bg/hero-1.webp");
 }
 
 .gallery-hero .page-hero-media {
-  background-image: url("images/sample-vw-in-garage.jpeg");
+  background-image: url("bg/gallery-hero.webp");
+}
+
+.detail-hero h1 {
+  font-size: clamp(2.3rem, 5.4vw, 4.8rem);
+  line-height: 1;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.breadcrumb a:hover {
+  color: var(--lime);
+  text-decoration: underline;
+}
+
+.breadcrumb [aria-current="page"] {
+  color: var(--white);
 }
 
 .page-hero-content {
@@ -629,7 +660,12 @@ h3 {
   min-height: 220px;
 }
 
-.results-gallery img:first-child {
+.results-gallery picture {
+  display: block;
+  min-height: 220px;
+}
+
+.results-gallery picture:first-child {
   grid-row: span 2;
 }
 
@@ -891,7 +927,7 @@ details p {
   gap: 24px;
   background:
     linear-gradient(90deg, rgba(7, 19, 38, 0.92), rgba(18, 69, 255, 0.62), rgba(255, 63, 142, 0.48)),
-    url("images/hero-2.png") center / cover;
+    url("bg/hero-2.webp") center / cover;
   color: var(--white);
 }
 
@@ -902,7 +938,7 @@ details p {
 
 .site-footer {
   display: grid;
-  grid-template-columns: minmax(260px, 520px) auto;
+  grid-template-columns: minmax(260px, 520px) auto auto;
   justify-content: space-between;
   gap: 32px;
   background:
@@ -922,6 +958,33 @@ address {
   font-style: normal;
 }
 
+.footer-links {
+  display: flex;
+  align-items: flex-start;
+  justify-self: center;
+  gap: clamp(24px, 4vw, 56px);
+}
+
+.footer-links strong {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--white);
+}
+
+.footer-links ul {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.92rem;
+}
+
+.footer-links a:hover {
+  color: var(--gold);
+  text-decoration: underline;
+}
+
 address strong {
   color: var(--white);
 }
@@ -932,7 +995,7 @@ address a {
 }
 
 .detail-hero .page-hero-media {
-  background-image: url("images/hero-2.png");
+  background-image: url("bg/hero-2.webp");
 }
 
 .detail-body {
@@ -1017,7 +1080,19 @@ address a {
     grid-template-columns: 1fr auto;
   }
 
-  nav {
+  .site-footer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .site-footer > div:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .footer-links {
+    justify-self: start;
+  }
+
+  .site-header nav {
     display: none;
   }
 
@@ -1118,12 +1193,16 @@ address a {
     grid-row: auto;
   }
 
-  .results-gallery img:first-child {
+  .results-gallery picture:first-child {
     grid-row: auto;
   }
 
   .cta-panel {
     align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer-links {
     flex-direction: column;
   }
 

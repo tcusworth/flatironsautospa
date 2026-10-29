@@ -4,3 +4,26 @@
 
 [build.environment]
   NODE_VERSION = "22"
+
+# Optimized, content-hashed images never change: cache for a year.
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Stable-name background images, original full-size images, favicons.
+[[headers]]
+  for = "/assets/bg/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/assets/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

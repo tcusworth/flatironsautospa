@@ -2,7 +2,8 @@
 title: "Exterior Detailing Longmont & Boulder CO | Flatirons Auto Spa"
 description: "Exterior detailing in Longmont and Boulder with hand washing, wheels, tires, paint-safe cleaning, wax sealant, polishing, gloss, and protection."
 eyebrow: "Exterior detailing"
-heading: "Sharper gloss. Cleaner paint. Better protection."
+heading: "Exterior Detailing in Longmont & Boulder, CO"
+slogan: "Sharper gloss. Cleaner paint. Better protection."
 lead: "Exterior detailing for vehicles exposed to Colorado sun, snow, road film, and daily driving."
 panelTitle: "Exterior finish"
 panelItems:
@@ -20,6 +21,12 @@ related:
 ctaLabel: "Request exterior detailing"
 sitemapPriority: 0.85
 sitemapChangefreq: monthly
+crumb: "Exterior Detailing"
+faqs:
+  - winter-salt
+  - polishing
+  - duration
+  - appointment
 ---
 
 ## Exterior auto detailing in Longmont and Boulder.

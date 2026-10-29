@@ -2,7 +2,8 @@
 title: "Auto Detailing Boulder CO | Flatirons Auto Spa"
 description: "Auto detailing for Boulder CO drivers, including interior detailing, exterior detailing, polishing, ceramic coating, and premium vehicle protection."
 eyebrow: "Boulder CO"
-heading: "Auto detailing for Boulder drivers."
+heading: "Auto Detailing in Boulder, CO"
+slogan: "Auto detailing for Boulder drivers."
 lead: "Premium detailing near Boulder for daily drivers, SUVs, luxury vehicles, classics, and weekend cars."
 panelTitle: "Boulder services"
 panelItems:
@@ -20,6 +21,14 @@ related:
 ctaLabel: "Book Boulder auto detailing"
 sitemapPriority: 0.9
 sitemapChangefreq: monthly
+crumb: "Auto Detailing Boulder CO"
+areaServed:
+  - "Boulder, CO"
+faqs:
+  - mobile
+  - appointment
+  - winter-salt
+  - cost
 ---
 
 ## Premium auto detailing near Boulder, Colorado.

@@ -1,8 +1,9 @@
 ---
 title: "Interior Detailing Longmont & Boulder CO | Flatirons Auto Spa"
-description: "Premium interior detailing for Longmont and Boulder vehicles, including vacuuming, steam cleaning, leather care, glass, pet hair, and odor-conscious cabin refreshes."
+description: "Premium interior detailing for Longmont and Boulder vehicles: vacuuming, steam cleaning, leather care, glass, pet hair, and odor-conscious cabin refreshes."
 eyebrow: "Interior detailing"
-heading: "Deep-clean comfort for every drive."
+heading: "Interior Detailing in Longmont & Boulder, CO"
+slogan: "Deep-clean comfort for every drive."
 lead: "Interior detailing for Boulder County vehicles that need a cleaner cabin, fresher materials, and careful surface care."
 panelTitle: "Interior care"
 panelItems:
@@ -20,6 +21,12 @@ related:
 ctaLabel: "Request interior detailing"
 sitemapPriority: 0.85
 sitemapChangefreq: monthly
+crumb: "Interior Detailing"
+faqs:
+  - pet-hair
+  - odors
+  - duration
+  - appointment
 ---
 
 ## Interior auto detailing in Longmont and Boulder.

@@ -2,7 +2,8 @@
 title: "Maintenance Wash Longmont & Boulder CO | Flatirons Auto Spa"
 description: "Maintenance wash service for Longmont and Boulder drivers who want regular vehicle cleaning, safe wash care, wheels, tires, glass, and protection upkeep."
 eyebrow: "Maintenance wash"
-heading: "Keep the detail looking fresh."
+heading: "Maintenance Wash in Longmont & Boulder, CO"
+slogan: "Keep the detail looking fresh."
 lead: "A maintenance wash helps preserve gloss and protection between deeper detailing appointments."
 panelTitle: "Routine care"
 panelItems:
@@ -20,6 +21,12 @@ related:
 ctaLabel: "Request a maintenance wash"
 sitemapPriority: 0.75
 sitemapChangefreq: monthly
+crumb: "Maintenance Wash"
+faqs:
+  - basic-detail
+  - duration
+  - appointment
+  - winter-salt
 ---
 
 ## Maintenance wash service for Boulder County.

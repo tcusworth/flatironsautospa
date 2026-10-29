@@ -2,7 +2,8 @@
 title: "Ceramic Coating Longmont & Boulder CO | Flatirons Auto Spa"
 description: "Ceramic coating service for Longmont and Boulder vehicles with gloss, easier washing, and durable paint protection for Colorado roads."
 eyebrow: "Ceramic coating"
-heading: "Long-lasting gloss for Colorado roads."
+heading: "Ceramic Coating in Longmont & Boulder, CO"
+slogan: "Long-lasting gloss for Colorado roads."
 lead: "Ceramic coating adds a slick protective layer that helps paint stay glossier and easier to maintain."
 panelTitle: "Paint protection"
 panelItems:
@@ -20,6 +21,12 @@ related:
 ctaLabel: "Request ceramic coating"
 sitemapPriority: 0.85
 sitemapChangefreq: monthly
+crumb: "Ceramic Coating"
+faqs:
+  - ceramic-life
+  - cost
+  - luxury
+  - appointment
 ---
 
 ## Ceramic coating for Boulder County vehicles.

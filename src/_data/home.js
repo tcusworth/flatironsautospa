@@ -1,5 +1,5 @@
 // Homepage content. Edit packages, FAQs, services and local pages here.
-export default {
+const home = {
   hero: {
     eyebrow: "Boulder County auto detailing",
     heading: "Clean. Glossy. Protected.",
@@ -26,7 +26,7 @@ export default {
     eyebrow: "Our services",
     heading: "Protection, gloss, and deep-clean comfort in one studio.",
     intro:
-      "These service clusters are written for both people and answer engines: clear names, direct outcomes, and local search language that matches what Boulder County drivers actually ask for.",
+      "Exterior, interior, and paint-protection services for sedans, SUVs, and enthusiast vehicles across Boulder County.",
     cards: [
       {
         title: "Exterior Detailing",
@@ -179,50 +179,62 @@ export default {
     heading: "Most popular questions about auto detailing.",
     items: [
       {
+        id: "basic-detail",
         q: "What is included in a basic detail?",
         a: "A basic detail includes a full exterior wash, wheel and tire cleaning, interior vacuum, wipe-down of surfaces, wax sealant, and streak-free glass cleaning.",
       },
       {
+        id: "duration",
         q: "How long does a full detail take?",
         a: "Most full details take between 2 and 4 hours depending on vehicle size, condition, and selected services.",
       },
       {
+        id: "appointment",
         q: "Do I need an appointment?",
         a: "Yes. Detailing services require an appointment so the team can reserve enough time and attention for your vehicle.",
       },
       {
+        id: "mobile",
         q: "Do you offer mobile detailing?",
         a: "Services are primarily performed at the Longmont location. Mobile detailing may be available upon request.",
       },
       {
+        id: "polishing",
         q: "Can polishing remove scratches or paint imperfections?",
         a: "Light scratches, swirls, and oxidation can often be improved through polishing. Deep scratches may require paint correction or touch-up work.",
       },
       {
+        id: "schedule",
         q: "How do I schedule a detail?",
         a: "Call Flatirons Auto Spa at (303) 210-7631 to discuss your vehicle and reserve an appointment.",
       },
       {
+        id: "cost",
         q: "How much does auto detailing cost?",
         a: "Packages currently start at $199 for sedans and $249 for SUVs, with premium and executive options available for deeper cleaning, polishing, ceramic protection, and concierge service.",
       },
       {
+        id: "ceramic-life",
         q: "How long does ceramic coating last?",
         a: "Ceramic coating longevity depends on prep quality, coating type, storage, washing habits, and Colorado weather exposure. A properly maintained coating can provide durable gloss and easier cleaning for an extended period.",
       },
       {
+        id: "pet-hair",
         q: "Can you remove pet hair from my interior?",
         a: "Yes. Pet hair removal can be included with interior detailing, though heavy embedded hair may require extra time because carpet fibers and cargo areas often hold hair tightly.",
       },
       {
+        id: "odors",
         q: "Can detailing help with odors?",
         a: "Interior detailing and steam cleaning can reduce many odors from food, pets, smoke, moisture, and daily use. Severe odors may require multiple treatments depending on the source.",
       },
       {
+        id: "winter-salt",
         q: "Should I detail my vehicle after winter road salt?",
         a: "Yes. Winter salt, slush, and road film can sit on paint, wheels, jambs, and lower panels. A proper wash and protection service helps clean away buildup and prepare the vehicle for spring.",
       },
       {
+        id: "luxury",
         q: "Do you work on luxury, exotic, and classic vehicles?",
         a: "Yes. Flatirons Auto Spa works with premium, classic, and enthusiast vehicles using careful wash methods, appropriate products, and finish-sensitive detailing techniques.",
       },
@@ -233,3 +245,8 @@ export default {
     heading: "Book premium auto detailing near Boulder today.",
   },
 };
+
+// Lookup so detail pages can reuse homepage FAQ answers by id
+home.faq.byId = Object.fromEntries(home.faq.items.map((item) => [item.id, item]));
+
+export default home;

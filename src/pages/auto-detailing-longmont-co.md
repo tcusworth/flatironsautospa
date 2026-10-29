@@ -2,7 +2,8 @@
 title: "Auto Detailing Longmont CO | Flatirons Auto Spa"
 description: "Auto detailing in Longmont CO at Flatirons Auto Spa, including interior cleaning, exterior detailing, ceramic coating, paint correction, and executive packages."
 eyebrow: "Longmont CO"
-heading: "Auto detailing in Longmont."
+heading: "Auto Detailing in Longmont, CO"
+slogan: "Auto detailing in Longmont."
 lead: "Local premium detailing at 3845 Florentine Drive for Longmont and Boulder County vehicles."
 panelTitle: "Longmont detailing"
 panelItems:
@@ -20,6 +21,14 @@ related:
 ctaLabel: "Book Longmont detailing"
 sitemapPriority: 0.9
 sitemapChangefreq: monthly
+crumb: "Auto Detailing Longmont CO"
+areaServed:
+  - "Longmont, CO"
+faqs:
+  - appointment
+  - duration
+  - mobile
+  - cost
 ---
 
 ## Premium Longmont auto detailing.

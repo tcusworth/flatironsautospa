@@ -1,8 +1,9 @@
 ---
 title: "Executive Detail Packages Longmont & Boulder CO | Flatirons Auto Spa"
-description: "Executive auto detailing packages for Longmont and Boulder vehicles, including premium interior care, exterior detail, polishing, ceramic coating, and concierge options."
+description: "Executive auto detailing packages for Longmont and Boulder vehicles: premium interior care, exterior detail, polishing, ceramic coating, and concierge options."
 eyebrow: "Executive packages"
-heading: "Full-service detailing for the best result."
+heading: "Executive Detail Packages in Longmont & Boulder, CO"
+slogan: "Full-service detailing for the best result."
 lead: "Premium packages combine deep cleaning, protection, polishing, ceramic options, and convenience."
 panelTitle: "Package care"
 panelItems:
@@ -20,6 +21,12 @@ related:
 ctaLabel: "Request executive detailing"
 sitemapPriority: 0.8
 sitemapChangefreq: monthly
+crumb: "Executive Detail Packages"
+faqs:
+  - cost
+  - luxury
+  - mobile
+  - appointment
 ---
 
 ## Executive detail packages in Longmont and Boulder.

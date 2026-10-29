@@ -2,7 +2,8 @@
 title: "Paint Correction Longmont & Boulder CO | Flatirons Auto Spa"
 description: "Paint correction in Longmont and Boulder to improve swirls, haze, oxidation, light defects, and gloss before sealant or ceramic coating."
 eyebrow: "Paint correction"
-heading: "Reduce swirls. Restore clarity."
+heading: "Paint Correction in Longmont & Boulder, CO"
+slogan: "Reduce swirls. Restore clarity."
 lead: "Paint correction improves gloss and clarity by carefully polishing visible paint defects."
 panelTitle: "Correction focus"
 panelItems:
@@ -20,6 +21,11 @@ related:
 ctaLabel: "Request paint correction"
 sitemapPriority: 0.85
 sitemapChangefreq: monthly
+crumb: "Paint Correction"
+faqs:
+  - polishing
+  - ceramic-life
+  - duration
 ---
 
 ## Paint correction for a cleaner finish.

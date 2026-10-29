@@ -5,9 +5,10 @@ solidHeader: true
 <section class="page-hero detail-hero">
   <div class="page-hero-media" aria-hidden="true"></div>
   <div class="page-hero-content reveal">
+    {% include "breadcrumb.njk" %}
     <p class="eyebrow">{{ eyebrow }}</p>
     <h1>{{ heading }}</h1>
-    <p>{{ lead }}</p>
+    <p>{% if slogan %}{{ slogan }} {% endif %}{{ lead }}</p>
   </div>
 </section>
 <section class="section detail-body">
@@ -34,3 +35,20 @@ solidHeader: true
     <a class="button primary" href="/contact/">{{ ctaLabel }}</a>
   </article>
 </section>
+{%- if faqs %}
+<section class="section faq">
+  <div class="section-heading reveal">
+    <p class="eyebrow">FAQs</p>
+    <h2>Common questions.</h2>
+  </div>
+  <div class="faq-list">
+    {%- for id in faqs %}
+    {%- set item = home.faq.byId[id] %}
+    <details class="reveal">
+      <summary>{{ item.q }}</summary>
+      <p>{{ item.a }}</p>
+    </details>
+    {%- endfor %}
+  </div>
+</section>
+{%- endif %}

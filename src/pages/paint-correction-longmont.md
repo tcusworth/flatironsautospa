@@ -2,7 +2,8 @@
 title: "Paint Correction Longmont CO | Flatirons Auto Spa"
 description: "Paint correction in Longmont CO for swirl marks, haze, oxidation, light scratches, gloss restoration, and ceramic coating prep."
 eyebrow: "Longmont paint correction"
-heading: "Make tired paint look sharper."
+heading: "Paint Correction in Longmont, CO"
+slogan: "Make tired paint look sharper."
 lead: "Paint correction in Longmont for vehicles with swirl marks, haze, light defects, or dull finish."
 panelTitle: "Correction goals"
 panelItems:
@@ -20,6 +21,13 @@ related:
 ctaLabel: "Book paint correction"
 sitemapPriority: 0.85
 sitemapChangefreq: monthly
+crumb: "Paint Correction Longmont"
+areaServed:
+  - "Longmont, CO"
+faqs:
+  - polishing
+  - duration
+  - ceramic-life
 ---
 
 ## Paint correction service in Longmont.

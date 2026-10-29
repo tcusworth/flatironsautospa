@@ -1,11 +1,12 @@
 ---
 layout: layouts/base.njk
 title: "Auto Detailing Gallery | Flatirons Auto Spa Boulder & Longmont"
-description: "Explore Flatirons Auto Spa sample-page gallery images featuring Porsche, Ferrari, Mercedes, Tesla, Range Rover, BMW, Honda, and vintage vehicle detailing work."
+description: "Vehicle gallery from Flatirons Auto Spa, a premium auto detailing studio in Longmont serving Boulder County: Porsche, Ferrari, Mercedes, Tesla, BMW, and more."
 ogTitle: "Flatirons Auto Spa Detailing Gallery"
-ogDescription: "Sample-page vehicle gallery imagery from Flatirons Auto Spa."
+ogDescription: "Vehicle gallery from Flatirons Auto Spa."
 ogImage: "/assets/images/sample-vw-in-garage.jpeg"
 schemaKey: gallery
+crumb: "Gallery"
 solidHeader: true
 sitemapPriority: 0.8
 sitemapChangefreq: monthly
@@ -13,24 +14,24 @@ sitemapChangefreq: monthly
 <section class="page-hero gallery-hero">
   <div class="page-hero-media" aria-hidden="true"></div>
   <div class="page-hero-content reveal">
-    <p class="eyebrow">Sample-page gallery</p>
+    {% include "breadcrumb.njk" %}
+    <p class="eyebrow">Gallery</p>
     <h1>Some examples of our work.</h1>
-    <p>A complete local copy of the vehicle images from the original Flatirons Auto Spa sample page.</p>
+    <p>A selection of vehicle images.</p>
   </div>
 </section>
 
 <section class="section gallery-intro">
   <div class="section-heading reveal">
     <p class="eyebrow">Gallery</p>
-    <h2>All images from the original sample page.</h2>
-    <p>These full-size assets were pulled from the current sample-page gallery and arranged into a richer responsive layout.</p>
+    <h2>Browse the gallery.</h2>
   </div>
 </section>
 
 <section class="gallery-grid" aria-label="{{ site.name }} image gallery">
   {%- for item in gallery %}
   <figure class="gallery-item{% if item.size %} {{ item.size }}{% endif %} reveal">
-    <img src="/assets/images/{{ item.file }}" alt="{{ item.alt }}">
+    {% img item.file, item.alt, "(min-width: 980px) 640px, (min-width: 680px) 50vw, 100vw" %}
     <figcaption>{{ item.caption }}</figcaption>
   </figure>
   {%- endfor %}
