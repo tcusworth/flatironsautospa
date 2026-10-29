@@ -17,6 +17,11 @@
   --hot-gradient: linear-gradient(135deg, #ff3f8e 0%, #ff5a36 45%, #ffd447 100%);
   --cool-gradient: linear-gradient(135deg, #071326 0%, #1245ff 46%, #00c2ff 100%);
   --radius: 8px;
+  /* Side padding that also caps content at --content-max on wide screens;
+     backgrounds stay full-bleed. Unchanged below ~1440px. */
+  --content-max: 1280px;
+  --gutter: max(clamp(20px, 6vw, 84px), calc((100% - var(--content-max)) / 2));
+  --gutter-header: max(clamp(18px, 4vw, 56px), calc((100% - var(--content-max)) / 2));
 }
 
 * {
@@ -70,7 +75,7 @@ a {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 28px;
-  padding: 14px clamp(18px, 4vw, 56px);
+  padding: 14px var(--gutter-header);
   color: var(--white);
   transition: background 220ms ease, box-shadow 220ms ease, padding 220ms ease;
 }
@@ -146,7 +151,7 @@ nav a[aria-current="page"] {
   grid-template-columns: minmax(0, 1fr);
   align-items: end;
   gap: 32px;
-  padding: 140px clamp(20px, 6vw, 84px) 72px;
+  padding: 140px var(--gutter) 72px;
   overflow: hidden;
   color: var(--white);
 }
@@ -156,7 +161,7 @@ nav a[aria-current="page"] {
   min-height: 72vh;
   display: grid;
   align-items: end;
-  padding: 150px clamp(20px, 6vw, 84px) 72px;
+  padding: 150px var(--gutter) 72px;
   overflow: hidden;
   color: var(--white);
   background: var(--ink);
@@ -319,7 +324,7 @@ h3 {
 }
 
 .answer-strip {
-  padding: 18px clamp(20px, 6vw, 84px);
+  padding: 18px var(--gutter);
   background: var(--vivid-gradient);
   color: #071326;
 }
@@ -333,7 +338,7 @@ h3 {
 .process,
 .cta-panel,
 .site-footer {
-  padding: clamp(74px, 10vw, 132px) clamp(20px, 6vw, 84px);
+  padding: clamp(74px, 10vw, 132px) var(--gutter);
 }
 
 .packages {
@@ -810,7 +815,7 @@ textarea:focus {
   grid-auto-rows: 230px;
   grid-auto-flow: dense;
   gap: 16px;
-  padding: 0 clamp(20px, 6vw, 84px) clamp(74px, 10vw, 132px);
+  padding: 0 var(--gutter) clamp(74px, 10vw, 132px);
 }
 
 .gallery-item {
