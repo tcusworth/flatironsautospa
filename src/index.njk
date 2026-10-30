@@ -14,7 +14,12 @@ sitemapChangefreq: weekly
     {%- if loop.first %}
     {% img img, "", "100vw", { class: "hero-slide is-active", loading: "eager", fetchpriority: "high", widths: [800, 1280, 1920] } %}
     {%- else %}
-    {% img img, "", "100vw", { class: "hero-slide", widths: [800, 1280, 1920] } %}
+    {# Secondary slides stay inert until after the first image has had a chance
+       to become the LCP. This prevents a decorative carousel from competing
+       with the page's most important image on mobile. #}
+    <template data-hero-slide-template>
+      {% img img, "", "100vw", { class: "hero-slide", widths: [800, 1280, 1920] } %}
+    </template>
     {%- endif %}
     {%- endfor %}
   </div>

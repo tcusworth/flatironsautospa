@@ -33,6 +33,7 @@ export default function (eleventyConfig) {
   // available (used for social-share previews and image structured data).
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
+  eleventyConfig.addPassthroughCopy({ "src/llms.txt": "llms.txt" });
   eleventyConfig.addPassthroughCopy({ "src/favicons": "/" });
 
   // Responsive <picture> (AVIF/WebP/JPEG, multiple widths, width/height set,

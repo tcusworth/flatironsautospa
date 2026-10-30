@@ -74,6 +74,10 @@ function breadcrumbs(pageUrl, label) {
 
 export function buildPageSchema(data) {
   const url = data.page.url;
+  const faqItems = (data.faqs || [])
+    .map((id) => home.faq.byId[id])
+    .filter(Boolean);
+
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -89,6 +93,19 @@ export function buildPageSchema(data) {
         areaServed: data.areaServed || DEFAULT_AREA,
       },
       breadcrumbs(url, data.crumb),
+      ...(faqItems.length
+        ? [
+            {
+              "@type": "FAQPage",
+              "@id": abs(`${url}#faq-schema`),
+              mainEntity: faqItems.map((item) => ({
+                "@type": "Question",
+                name: item.q,
+                acceptedAnswer: { "@type": "Answer", text: item.a },
+              })),
+            },
+          ]
+        : []),
     ],
   };
 }

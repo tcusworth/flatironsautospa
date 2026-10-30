@@ -1,5 +1,6 @@
 const header = document.querySelector("[data-header]");
-const slides = Array.from(document.querySelectorAll(".hero-slide"));
+const heroMedia = document.querySelector(".hero-media");
+const heroSlideTemplates = Array.from(document.querySelectorAll("[data-hero-slide-template]"));
 const revealItems = Array.from(document.querySelectorAll(".reveal"));
 const contactForm = document.querySelector("[data-contact-form]");
 
@@ -12,14 +13,23 @@ const syncHeader = () => {
 window.addEventListener("scroll", syncHeader, { passive: true });
 syncHeader();
 
-if (slides.length > 1 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  let index = 0;
+if (heroMedia && heroSlideTemplates.length && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  // Add decorative slides only after the LCP candidate is established. Template
+  // contents do not request images until they are appended to the page.
+  window.setTimeout(() => {
+    heroSlideTemplates.forEach((template) => {
+      heroMedia.append(template.content.cloneNode(true));
+      template.remove();
+    });
 
-  setInterval(() => {
-    slides[index].classList.remove("is-active");
-    index = (index + 1) % slides.length;
-    slides[index].classList.add("is-active");
-  }, 5200);
+    const slides = Array.from(heroMedia.querySelectorAll(".hero-slide"));
+    let index = 0;
+    window.setInterval(() => {
+      slides[index].classList.remove("is-active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("is-active");
+    }, 5200);
+  }, 1800);
 }
 
 const observer = new IntersectionObserver(
